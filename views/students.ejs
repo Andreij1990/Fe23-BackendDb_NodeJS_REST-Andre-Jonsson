@@ -1,0 +1,22 @@
+<% layout('layout', { title: 'Students' }) %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Town</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% students.forEach(student => { %>
+      <tr>
+        <td><a href="/students/id/<%= student.id %>/courses"><%= student.id %></a></td>
+        <td><a href="/students/fName/<%= student.fName %>/courses"><%= student.fName %></a></td>
+        <td><a href="/students/lName/<%= student.lName %>/courses"><%= student.lName %></a></td>
+        <td><a href="/students/town/<%= student.town %>/students"><%= student.town %></a></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

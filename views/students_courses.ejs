@@ -1,0 +1,20 @@
+<% layout('layout', { title: 'students_courses' }) %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Student ID</th>
+      <th>Course ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% studentsCourses.forEach(sc => { %>
+      <tr>
+        <td><%= sc.id %></td>
+        <td><a href="/courses/id/<%= sc.courses_id %>/students"><%= sc.courses_id %></a></td>
+        <td><a href="/students/id/<%= sc.students_id %>/courses"><%= sc.students_id %></a></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
